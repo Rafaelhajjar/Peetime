@@ -10,6 +10,7 @@
 		32DFCC462DE757A40039EFD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC452DE757A40039EFD6 /* ContentView.swift */; };
 		32DFCC7B2DE75D7F0039EFD6 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC7A2DE75D750039EFD6 /* CaptureView.swift */; };
 		32DFCC7D2DE75DAE0039EFD6 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC7C2DE75DA50039EFD6 /* CameraView.swift */; };
+		32DFCC822DE769470039EFD6 /* CaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC812DE7693F0039EFD6 /* CaptureViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		32DFCC7E2DE768B20039EFD6 /* UrineColorLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrineColorLevel.swift; sourceTree = "<group>"; };
 		32DFCC7F2DE768C70039EFD6 /* UIColor+HSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSV.swift"; sourceTree = "<group>"; };
 		32DFCC802DE768E00039EFD6 /* ImageAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnalyzer.swift; sourceTree = "<group>"; };
+		32DFCC812DE7693F0039EFD6 /* CaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -137,6 +139,7 @@
 		32DFCC712DE75AE60039EFD6 /* Capture */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC812DE7693F0039EFD6 /* CaptureViewModel.swift */,
 				32DFCC7C2DE75DA50039EFD6 /* CameraView.swift */,
 				32DFCC7A2DE75D750039EFD6 /* CaptureView.swift */,
 				32DFCC452DE757A40039EFD6 /* ContentView.swift */,
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32DFCC462DE757A40039EFD6 /* ContentView.swift in Sources */,
+				32DFCC822DE769470039EFD6 /* CaptureViewModel.swift in Sources */,
 				32DFCC7B2DE75D7F0039EFD6 /* CaptureView.swift in Sources */,
 				32DFCC7D2DE75DAE0039EFD6 /* CameraView.swift in Sources */,
 			);
