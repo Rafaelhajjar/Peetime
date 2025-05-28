@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		32DFCC462DE757A40039EFD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC452DE757A40039EFD6 /* ContentView.swift */; };
+		32DFCC7B2DE75D7F0039EFD6 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC7A2DE75D750039EFD6 /* CaptureView.swift */; };
+		32DFCC7D2DE75DAE0039EFD6 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC7C2DE75DA50039EFD6 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,11 @@
 		32DFCC452DE757A40039EFD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32DFCC4D2DE757A50039EFD6 /* PeetimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeetimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DFCC572DE757A50039EFD6 /* PeetimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeetimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32DFCC7A2DE75D750039EFD6 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		32DFCC7C2DE75DA50039EFD6 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		32DFCC7E2DE768B20039EFD6 /* UrineColorLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrineColorLevel.swift; sourceTree = "<group>"; };
+		32DFCC7F2DE768C70039EFD6 /* UIColor+HSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSV.swift"; sourceTree = "<group>"; };
+		32DFCC802DE768E00039EFD6 /* ImageAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnalyzer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -130,6 +137,8 @@
 		32DFCC712DE75AE60039EFD6 /* Capture */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC7C2DE75DA50039EFD6 /* CameraView.swift */,
+				32DFCC7A2DE75D750039EFD6 /* CaptureView.swift */,
 				32DFCC452DE757A40039EFD6 /* ContentView.swift */,
 			);
 			path = Capture;
@@ -152,6 +161,7 @@
 		32DFCC742DE75B0A0039EFD6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC7E2DE768B20039EFD6 /* UrineColorLevel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 		32DFCC782DE75B420039EFD6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC802DE768E00039EFD6 /* ImageAnalyzer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 		32DFCC792DE75B4C0039EFD6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC7F2DE768C70039EFD6 /* UIColor+HSV.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -315,6 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				32DFCC462DE757A40039EFD6 /* ContentView.swift in Sources */,
+				32DFCC7B2DE75D7F0039EFD6 /* CaptureView.swift in Sources */,
+				32DFCC7D2DE75DAE0039EFD6 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,13 +488,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VQQ437ZK47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use your camera to analyze hydration levels from the color of your urine.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,13 +518,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VQQ437ZK47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use your camera to analyze hydration levels from the color of your urine.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
