@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32DFCC462DE757A40039EFD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC452DE757A40039EFD6 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32DFCC4E2DE757A50039EFD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32DFCC382DE757A40039EFD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32DFCC3F2DE757A40039EFD6;
+			remoteInfo = Peetime;
+		};
+		32DFCC582DE757A50039EFD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32DFCC382DE757A40039EFD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32DFCC3F2DE757A40039EFD6;
+			remoteInfo = Peetime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32DFCC402DE757A40039EFD6 /* Peetime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peetime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32DFCC452DE757A40039EFD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		32DFCC4D2DE757A50039EFD6 /* PeetimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeetimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32DFCC572DE757A50039EFD6 /* PeetimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeetimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		32DFCC422DE757A40039EFD6 /* Peetime */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Peetime;
+			sourceTree = "<group>";
+		};
+		32DFCC502DE757A50039EFD6 /* PeetimeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PeetimeTests;
+			sourceTree = "<group>";
+		};
+		32DFCC5A2DE757A50039EFD6 /* PeetimeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PeetimeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32DFCC3D2DE757A40039EFD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32DFCC4A2DE757A50039EFD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32DFCC542DE757A50039EFD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32DFCC372DE757A40039EFD6 = {
+			isa = PBXGroup;
+			children = (
+				32DFCC702DE75AD80039EFD6 /* Resources */,
+				32DFCC6E2DE75ABF0039EFD6 /* Features */,
+				32DFCC6D2DE75AB80039EFD6 /* Core */,
+				32DFCC422DE757A40039EFD6 /* Peetime */,
+				32DFCC502DE757A50039EFD6 /* PeetimeTests */,
+				32DFCC5A2DE757A50039EFD6 /* PeetimeUITests */,
+				32DFCC412DE757A40039EFD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32DFCC412DE757A40039EFD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32DFCC402DE757A40039EFD6 /* Peetime.app */,
+				32DFCC4D2DE757A50039EFD6 /* PeetimeTests.xctest */,
+				32DFCC572DE757A50039EFD6 /* PeetimeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32DFCC6D2DE75AB80039EFD6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				32DFCC792DE75B4C0039EFD6 /* Utils */,
+				32DFCC782DE75B420039EFD6 /* Services */,
+				32DFCC742DE75B0A0039EFD6 /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		32DFCC6E2DE75ABF0039EFD6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				32DFCC732DE75AFC0039EFD6 /* Settings */,
+				32DFCC722DE75AEE0039EFD6 /* Result */,
+				32DFCC712DE75AE60039EFD6 /* Capture */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		32DFCC702DE75AD80039EFD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32DFCC712DE75AE60039EFD6 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				32DFCC452DE757A40039EFD6 /* ContentView.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		32DFCC722DE75AEE0039EFD6 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		32DFCC732DE75AFC0039EFD6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		32DFCC742DE75B0A0039EFD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		32DFCC782DE75B420039EFD6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		32DFCC792DE75B4C0039EFD6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32DFCC3F2DE757A40039EFD6 /* Peetime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32DFCC612DE757A50039EFD6 /* Build configuration list for PBXNativeTarget "Peetime" */;
+			buildPhases = (
+				32DFCC3C2DE757A40039EFD6 /* Sources */,
+				32DFCC3D2DE757A40039EFD6 /* Frameworks */,
+				32DFCC3E2DE757A40039EFD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				32DFCC422DE757A40039EFD6 /* Peetime */,
+			);
+			name = Peetime;
+			packageProductDependencies = (
+			);
+			productName = Peetime;
+			productReference = 32DFCC402DE757A40039EFD6 /* Peetime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		32DFCC4C2DE757A50039EFD6 /* PeetimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32DFCC642DE757A50039EFD6 /* Build configuration list for PBXNativeTarget "PeetimeTests" */;
+			buildPhases = (
+				32DFCC492DE757A50039EFD6 /* Sources */,
+				32DFCC4A2DE757A50039EFD6 /* Frameworks */,
+				32DFCC4B2DE757A50039EFD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32DFCC4F2DE757A50039EFD6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				32DFCC502DE757A50039EFD6 /* PeetimeTests */,
+			);
+			name = PeetimeTests;
+			packageProductDependencies = (
+			);
+			productName = PeetimeTests;
+			productReference = 32DFCC4D2DE757A50039EFD6 /* PeetimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		32DFCC562DE757A50039EFD6 /* PeetimeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32DFCC672DE757A50039EFD6 /* Build configuration list for PBXNativeTarget "PeetimeUITests" */;
+			buildPhases = (
+				32DFCC532DE757A50039EFD6 /* Sources */,
+				32DFCC542DE757A50039EFD6 /* Frameworks */,
+				32DFCC552DE757A50039EFD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32DFCC592DE757A50039EFD6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				32DFCC5A2DE757A50039EFD6 /* PeetimeUITests */,
+			);
+			name = PeetimeUITests;
+			packageProductDependencies = (
+			);
+			productName = PeetimeUITests;
+			productReference = 32DFCC572DE757A50039EFD6 /* PeetimeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32DFCC382DE757A40039EFD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					32DFCC3F2DE757A40039EFD6 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					32DFCC4C2DE757A50039EFD6 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 32DFCC3F2DE757A40039EFD6;
+					};
+					32DFCC562DE757A50039EFD6 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 32DFCC3F2DE757A40039EFD6;
+					};
+				};
+			};
+			buildConfigurationList = 32DFCC3B2DE757A40039EFD6 /* Build configuration list for PBXProject "Peetime" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32DFCC372DE757A40039EFD6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 32DFCC412DE757A40039EFD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32DFCC3F2DE757A40039EFD6 /* Peetime */,
+				32DFCC4C2DE757A50039EFD6 /* PeetimeTests */,
+				32DFCC562DE757A50039EFD6 /* PeetimeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32DFCC3E2DE757A40039EFD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32DFCC4B2DE757A50039EFD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32DFCC552DE757A50039EFD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32DFCC3C2DE757A40039EFD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32DFCC462DE757A40039EFD6 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32DFCC492DE757A50039EFD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32DFCC532DE757A50039EFD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32DFCC4F2DE757A50039EFD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32DFCC3F2DE757A40039EFD6 /* Peetime */;
+			targetProxy = 32DFCC4E2DE757A50039EFD6 /* PBXContainerItemProxy */;
+		};
+		32DFCC592DE757A50039EFD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32DFCC3F2DE757A40039EFD6 /* Peetime */;
+			targetProxy = 32DFCC582DE757A50039EFD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		32DFCC5F2DE757A50039EFD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32DFCC602DE757A50039EFD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32DFCC622DE757A50039EFD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.hydrometrics.Peetime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32DFCC632DE757A50039EFD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.hydrometrics.Peetime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		32DFCC652DE757A50039EFD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.hydrometrics.PeetimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Peetime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Peetime";
+			};
+			name = Debug;
+		};
+		32DFCC662DE757A50039EFD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.hydrometrics.PeetimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Peetime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Peetime";
+			};
+			name = Release;
+		};
+		32DFCC682DE757A50039EFD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.hydrometrics.PeetimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Peetime;
+			};
+			name = Debug;
+		};
+		32DFCC692DE757A50039EFD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.hydrometrics.PeetimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Peetime;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32DFCC3B2DE757A40039EFD6 /* Build configuration list for PBXProject "Peetime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32DFCC5F2DE757A50039EFD6 /* Debug */,
+				32DFCC602DE757A50039EFD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32DFCC612DE757A50039EFD6 /* Build configuration list for PBXNativeTarget "Peetime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32DFCC622DE757A50039EFD6 /* Debug */,
+				32DFCC632DE757A50039EFD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32DFCC642DE757A50039EFD6 /* Build configuration list for PBXNativeTarget "PeetimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32DFCC652DE757A50039EFD6 /* Debug */,
+				32DFCC662DE757A50039EFD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32DFCC672DE757A50039EFD6 /* Build configuration list for PBXNativeTarget "PeetimeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32DFCC682DE757A50039EFD6 /* Debug */,
+				32DFCC692DE757A50039EFD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32DFCC382DE757A40039EFD6 /* Project object */;
+}
