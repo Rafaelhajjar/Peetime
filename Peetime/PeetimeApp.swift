@@ -9,10 +9,17 @@ import SwiftUI
 
 @main
 struct PeetimeApp: App {
+    @StateObject private var session = UserSession()
+
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            CaptureView()
+            if session.username == nil {
+                UsernameEntryView()
+                    .environmentObject(session)
+            } else {
+                CaptureView()
+                    .environmentObject(session)
+            }
         }
     }
 }

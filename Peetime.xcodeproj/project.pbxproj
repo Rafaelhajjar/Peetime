@@ -13,6 +13,11 @@
 		32DFCC822DE769470039EFD6 /* CaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC812DE7693F0039EFD6 /* CaptureViewModel.swift */; };
 		32DFCC842DE769A30039EFD6 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC832DE7699B0039EFD6 /* ResultViewModel.swift */; };
 		32DFCC862DE769B50039EFD6 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC852DE769AC0039EFD6 /* ResultView.swift */; };
+		32DFCC872DE76B550039EFD6 /* ImageAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC802DE768E00039EFD6 /* ImageAnalyzer.swift */; };
+		32DFCC882DE76B5D0039EFD6 /* UIColor+HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC7F2DE768C70039EFD6 /* UIColor+HSV.swift */; };
+		32DFCC892DE76B670039EFD6 /* UrineColorLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC7E2DE768B20039EFD6 /* UrineColorLevel.swift */; };
+		32DFCC8B2DE77C410039EFD6 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC8A2DE77C380039EFD6 /* UserSession.swift */; };
+		32DFCC8E2DE77C740039EFD6 /* UsernameEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC8D2DE77C6D0039EFD6 /* UsernameEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,8 @@
 		32DFCC812DE7693F0039EFD6 /* CaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewModel.swift; sourceTree = "<group>"; };
 		32DFCC832DE7699B0039EFD6 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		32DFCC852DE769AC0039EFD6 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		32DFCC8A2DE77C380039EFD6 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		32DFCC8D2DE77C6D0039EFD6 /* UsernameEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -126,6 +133,7 @@
 		32DFCC6E2DE75ABF0039EFD6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC8C2DE77C650039EFD6 /* Auth */,
 				32DFCC732DE75AFC0039EFD6 /* Settings */,
 				32DFCC722DE75AEE0039EFD6 /* Result */,
 				32DFCC712DE75AE60039EFD6 /* Capture */,
@@ -178,6 +186,7 @@
 		32DFCC782DE75B420039EFD6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC8A2DE77C380039EFD6 /* UserSession.swift */,
 				32DFCC802DE768E00039EFD6 /* ImageAnalyzer.swift */,
 			);
 			path = Services;
@@ -189,6 +198,14 @@
 				32DFCC7F2DE768C70039EFD6 /* UIColor+HSV.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		32DFCC8C2DE77C650039EFD6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				32DFCC8D2DE77C6D0039EFD6 /* UsernameEntryView.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,9 +355,14 @@
 				32DFCC462DE757A40039EFD6 /* ContentView.swift in Sources */,
 				32DFCC842DE769A30039EFD6 /* ResultViewModel.swift in Sources */,
 				32DFCC822DE769470039EFD6 /* CaptureViewModel.swift in Sources */,
+				32DFCC882DE76B5D0039EFD6 /* UIColor+HSV.swift in Sources */,
 				32DFCC7B2DE75D7F0039EFD6 /* CaptureView.swift in Sources */,
+				32DFCC8B2DE77C410039EFD6 /* UserSession.swift in Sources */,
+				32DFCC892DE76B670039EFD6 /* UrineColorLevel.swift in Sources */,
 				32DFCC862DE769B50039EFD6 /* ResultView.swift in Sources */,
 				32DFCC7D2DE75DAE0039EFD6 /* CameraView.swift in Sources */,
+				32DFCC872DE76B550039EFD6 /* ImageAnalyzer.swift in Sources */,
+				32DFCC8E2DE77C740039EFD6 /* UsernameEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

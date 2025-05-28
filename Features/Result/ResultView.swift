@@ -12,24 +12,26 @@ struct ResultView: View {
     init(image: UIImage) { _vm = StateObject(wrappedValue: ResultViewModel(image: image)) }
 
     var body: some View {
-        switch vm.state {
-        case .loading:
-            ProgressView("Analyzing…").navigationTitle("Result")
-        case .failure:
-            VStack {
-                Image(systemName: "xmark.octagon").font(.system(size: 60))
-                Text("Couldn’t analyze photo").padding()
-                Button("Retry") { /* pop back */ }
+        Group {
+            switch vm.state {
+            case .loading:
+                VStack { ProgressView(); Text("Analyzing…") }
+            case .failure:
+                VStack {
+                    Image(systemName: "xmark.octagon").font(.largeTitle)
+                    Text("Couldn’t analyze photo")
+                }
+            case .success(let res):
+                VStack(spacing: 24) {
+                    Circle()
+                        .fill(Color(res.averageColor))
+                        .frame(width: 150, height: 150)
+                        .overlay(Text("\(res.level.rawValue)/8").font(.title).bold().foregroundColor(.white))
+                    Text(res.level.description).multilineTextAlignment(.center)
+                }
             }
-        case let .success(res):
-            VStack(spacing: 20) {
-                Circle()
-                    .fill(Color(res.averageColor))
-                    .frame(width: 140, height: 140)
-                    .overlay(Text("\(res.level.rawValue)/8").font(.title).bold().foregroundColor(.white))
-                Text(res.level.description).multilineTextAlignment(.center)
-            }
-            .navigationTitle("Hydration")
         }
+        .padding()
+        .navigationTitle("Hydration")
     }
 }

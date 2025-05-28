@@ -10,10 +10,12 @@ import SwiftUI
 @MainActor
 final class CaptureViewModel: ObservableObject {
     @Published var capturedImage: UIImage?
-    @Published var navigateToResult = false
+    @Published var showCamera = false
+    @Published var navPath = NavigationPath()   // ← new
 
     func handleImage(_ img: UIImage) {
         capturedImage = img
-        navigateToResult = true
+        showCamera = false            // dismiss camera
+        navPath.append(img)           // push ResultView
     }
 }
