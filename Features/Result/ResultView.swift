@@ -22,10 +22,11 @@ struct ResultView: View {
             switch vm.state {
             case .loading:
                 VStack { ProgressView(); Text("Analyzing…") }
-            case .failure:
+            case let .failure(msg):
                 VStack {
                     Image(systemName: "xmark.octagon").font(.largeTitle)
-                    Text("Couldn’t analyze photo")
+                    Text(msg)
+                        .multilineTextAlignment(.center)
                 }
             case let .success(res):
                 VStack(spacing: 20) {

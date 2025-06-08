@@ -17,7 +17,8 @@ struct ToiletChecker {
     func classify(_ uiImage: UIImage) -> ToiletCheckResult {
         guard let cg = uiImage.cgImage else { return .unknown }
 
-        let handler = VNImageRequestHandler(cgImage: cg, options: [:])
+        let orientation = CGImagePropertyOrientation(uiImage.imageOrientation)
+        let handler = VNImageRequestHandler(cgImage: cg, orientation: orientation, options: [:])
         let request = VNCoreMLRequest(model: try! VNCoreMLModel(for: MobileNetV2().model))
         
         
