@@ -29,6 +29,7 @@ struct CaptureView: View {
             // 🚀 push ResultView whenever navPath gets a UIImage
             .navigationDestination(for: UIImage.self) { img in
                 ResultView(image: img)
+                    .environmentObject(vm)
             }
             .fullScreenCover(isPresented: $vm.showCamera) {
                 CameraView(image: Binding(

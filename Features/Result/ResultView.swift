@@ -12,6 +12,7 @@ struct ResultView: View {
     @StateObject private var vm: ResultViewModel
     @State private var peeColorIndicator: Double = 4
 
+
     init(image: UIImage) {
         self.capturedImage = image
         _vm = StateObject(wrappedValue: ResultViewModel(image: image))
@@ -68,6 +69,7 @@ struct ResultView: View {
                         .onChange(of: peeColorIndicator) { newValue in
                             vm.updateUserRating(Int(newValue))
                         }
+
                 }
             }
         }
