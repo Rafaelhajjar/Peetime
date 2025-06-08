@@ -26,6 +26,7 @@
 		32DFCCA22DE793070039EFD6 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCCA12DE793070039EFD6 /* MobileNetV2.mlmodel */; };
                32DFCCA42DE793320039EFD6 /* ToiletChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCCA32DE793280039EFD6 /* ToiletChecker.swift */; };
                32DFCCA62DE795000039EFD6 /* CGImagePropertyOrientation+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCCA52DE795000039EFD6 /* CGImagePropertyOrientation+UIImage.swift */; };
+               32DFCCA82DE795800039EFD6 /* SoftmaxRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCCA72DE795800039EFD6 /* SoftmaxRegression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		32DFCCA12DE793070039EFD6 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
                32DFCCA32DE793280039EFD6 /* ToiletChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletChecker.swift; sourceTree = "<group>"; };
                32DFCCA52DE795000039EFD6 /* CGImagePropertyOrientation+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImage.swift"; sourceTree = "<group>"; };
+               32DFCCA72DE795800039EFD6 /* SoftmaxRegression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftmaxRegression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -206,9 +208,10 @@
 		32DFCC782DE75B420039EFD6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				32DFCC9F2DE78C560039EFD6 /* HydrationPredictor.swift */,
-				32DFCC8A2DE77C380039EFD6 /* UserSession.swift */,
-				32DFCC802DE768E00039EFD6 /* ImageAnalyzer.swift */,
+                               32DFCC9F2DE78C560039EFD6 /* HydrationPredictor.swift */,
+                               32DFCCA72DE795800039EFD6 /* SoftmaxRegression.swift */,
+                               32DFCC8A2DE77C380039EFD6 /* UserSession.swift */,
+                               32DFCC802DE768E00039EFD6 /* ImageAnalyzer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -401,9 +404,10 @@
 				32DFCC862DE769B50039EFD6 /* ResultView.swift in Sources */,
 				32DFCC7D2DE75DAE0039EFD6 /* CameraView.swift in Sources */,
 				32DFCC872DE76B550039EFD6 /* ImageAnalyzer.swift in Sources */,
-				32DFCC8E2DE77C740039EFD6 /* UsernameEntryView.swift in Sources */,
-				32DFCCA02DE78C580039EFD6 /* HydrationPredictor.swift in Sources */,
-			);
+                               32DFCC8E2DE77C740039EFD6 /* UsernameEntryView.swift in Sources */,
+                               32DFCCA02DE78C580039EFD6 /* HydrationPredictor.swift in Sources */,
+                               32DFCCA82DE795800039EFD6 /* SoftmaxRegression.swift in Sources */,
+                       );
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		32DFCC492DE757A50039EFD6 /* Sources */ = {
