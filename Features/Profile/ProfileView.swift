@@ -17,6 +17,11 @@ struct ProfileView: View {
         predicate: NSPredicate(format: "timestamp >= %@", startOfToday as NSDate))
     private var entries: FetchedResults<Entry>
 
+    /// Convenience wrapper around the fetched results.
+    /// This converts the `FetchedResults` collection into a regular array so
+    /// that we can easily reverse its order when presenting the list.
+    private var todayEntries: [Entry] { Array(entries) }
+
     var body: some View {
         NavigationStack {
             if entries.isEmpty {
@@ -84,7 +89,12 @@ struct ProfileView: View {
     // MARK: Delete
     private func delete(offsets: IndexSet) {
         let ctx = PersistenceController.shared.container.viewContext
-        offsets.map { entries[$0] }.forEach(ctx.delete)
+
+        // Items are displayed in reverse chronological order. Convert the
+        // offsets coming from the UI to the matching objects in `todayEntries`.
+        let displayed = Array(todayEntries.reversed())
+        offsets.map { displayed[$0] }.forEach(ctx.delete)
+
         try? ctx.save()
     }
 }
