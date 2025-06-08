@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct PeetimeApp: App {
     @StateObject private var session = UserSession()
+    private let persistence = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
@@ -17,8 +18,10 @@ struct PeetimeApp: App {
                 UsernameEntryView()
                     .environmentObject(session)
             } else {
-                CaptureView()
+                MainTabView()                                          // ← NEW
                     .environmentObject(session)
+                    .environment(\.managedObjectContext,
+                                  persistence.container.viewContext)    // ← pass context
             }
         }
     }

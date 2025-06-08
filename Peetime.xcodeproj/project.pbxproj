@@ -18,6 +18,13 @@
 		32DFCC892DE76B670039EFD6 /* UrineColorLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC7E2DE768B20039EFD6 /* UrineColorLevel.swift */; };
 		32DFCC8B2DE77C410039EFD6 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC8A2DE77C380039EFD6 /* UserSession.swift */; };
 		32DFCC8E2DE77C740039EFD6 /* UsernameEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC8D2DE77C6D0039EFD6 /* UsernameEntryView.swift */; };
+		32DFCC972DE780140039EFD6 /* Peetime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC952DE780140039EFD6 /* Peetime.xcdatamodeld */; };
+		32DFCC992DE7841D0039EFD6 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC982DE784120039EFD6 /* PersistenceController.swift */; };
+		32DFCC9C2DE7844B0039EFD6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC9B2DE784450039EFD6 /* ProfileView.swift */; };
+		32DFCC9E2DE784790039EFD6 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC9D2DE784760039EFD6 /* MainTabView.swift */; };
+		32DFCCA02DE78C580039EFD6 /* HydrationPredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCC9F2DE78C560039EFD6 /* HydrationPredictor.swift */; };
+		32DFCCA22DE793070039EFD6 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCCA12DE793070039EFD6 /* MobileNetV2.mlmodel */; };
+		32DFCCA42DE793320039EFD6 /* ToiletChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFCCA32DE793280039EFD6 /* ToiletChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,13 @@
 		32DFCC852DE769AC0039EFD6 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		32DFCC8A2DE77C380039EFD6 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		32DFCC8D2DE77C6D0039EFD6 /* UsernameEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameEntryView.swift; sourceTree = "<group>"; };
+		32DFCC962DE780140039EFD6 /* Peetime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Peetime.xcdatamodel; sourceTree = "<group>"; };
+		32DFCC982DE784120039EFD6 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		32DFCC9B2DE784450039EFD6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		32DFCC9D2DE784760039EFD6 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		32DFCC9F2DE78C560039EFD6 /* HydrationPredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationPredictor.swift; sourceTree = "<group>"; };
+		32DFCCA12DE793070039EFD6 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		32DFCCA32DE793280039EFD6 /* ToiletChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -100,6 +114,7 @@
 		32DFCC372DE757A40039EFD6 = {
 			isa = PBXGroup;
 			children = (
+				32DFCC952DE780140039EFD6 /* Peetime.xcdatamodeld */,
 				32DFCC702DE75AD80039EFD6 /* Resources */,
 				32DFCC6E2DE75ABF0039EFD6 /* Features */,
 				32DFCC6D2DE75AB80039EFD6 /* Core */,
@@ -133,6 +148,7 @@
 		32DFCC6E2DE75ABF0039EFD6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC9A2DE784360039EFD6 /* Profile */,
 				32DFCC8C2DE77C650039EFD6 /* Auth */,
 				32DFCC732DE75AFC0039EFD6 /* Settings */,
 				32DFCC722DE75AEE0039EFD6 /* Result */,
@@ -179,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				32DFCC7E2DE768B20039EFD6 /* UrineColorLevel.swift */,
+				32DFCCA12DE793070039EFD6 /* MobileNetV2.mlmodel */,
+				32DFCCA32DE793280039EFD6 /* ToiletChecker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +204,7 @@
 		32DFCC782DE75B420039EFD6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				32DFCC9F2DE78C560039EFD6 /* HydrationPredictor.swift */,
 				32DFCC8A2DE77C380039EFD6 /* UserSession.swift */,
 				32DFCC802DE768E00039EFD6 /* ImageAnalyzer.swift */,
 			);
@@ -196,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				32DFCC7F2DE768C70039EFD6 /* UIColor+HSV.swift */,
+				32DFCC982DE784120039EFD6 /* PersistenceController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -206,6 +226,15 @@
 				32DFCC8D2DE77C6D0039EFD6 /* UsernameEntryView.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		32DFCC9A2DE784360039EFD6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				32DFCC9D2DE784760039EFD6 /* MainTabView.swift */,
+				32DFCC9B2DE784450039EFD6 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,17 +381,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32DFCCA22DE793070039EFD6 /* MobileNetV2.mlmodel in Sources */,
+				32DFCC972DE780140039EFD6 /* Peetime.xcdatamodeld in Sources */,
+				32DFCC992DE7841D0039EFD6 /* PersistenceController.swift in Sources */,
 				32DFCC462DE757A40039EFD6 /* ContentView.swift in Sources */,
+				32DFCC9E2DE784790039EFD6 /* MainTabView.swift in Sources */,
 				32DFCC842DE769A30039EFD6 /* ResultViewModel.swift in Sources */,
 				32DFCC822DE769470039EFD6 /* CaptureViewModel.swift in Sources */,
 				32DFCC882DE76B5D0039EFD6 /* UIColor+HSV.swift in Sources */,
+				32DFCC9C2DE7844B0039EFD6 /* ProfileView.swift in Sources */,
 				32DFCC7B2DE75D7F0039EFD6 /* CaptureView.swift in Sources */,
+				32DFCCA42DE793320039EFD6 /* ToiletChecker.swift in Sources */,
 				32DFCC8B2DE77C410039EFD6 /* UserSession.swift in Sources */,
 				32DFCC892DE76B670039EFD6 /* UrineColorLevel.swift in Sources */,
 				32DFCC862DE769B50039EFD6 /* ResultView.swift in Sources */,
 				32DFCC7D2DE75DAE0039EFD6 /* CameraView.swift in Sources */,
 				32DFCC872DE76B550039EFD6 /* ImageAnalyzer.swift in Sources */,
 				32DFCC8E2DE77C740039EFD6 /* UsernameEntryView.swift in Sources */,
+				32DFCCA02DE78C580039EFD6 /* HydrationPredictor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +719,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		32DFCC952DE780140039EFD6 /* Peetime.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				32DFCC962DE780140039EFD6 /* Peetime.xcdatamodel */,
+			);
+			currentVersion = 32DFCC962DE780140039EFD6 /* Peetime.xcdatamodel */;
+			path = Peetime.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 32DFCC382DE757A40039EFD6 /* Project object */;
 }
