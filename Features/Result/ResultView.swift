@@ -10,9 +10,8 @@ import UIKit
 struct ResultView: View {
     let capturedImage: UIImage
     @StateObject private var vm: ResultViewModel
-    @State private var peeColorIndicator: Double = 0.5
-    @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject private var captureVM: CaptureViewModel
+    @State private var peeColorIndicator: Double = 4
+
 
     init(image: UIImage) {
         self.capturedImage = image
@@ -44,6 +43,7 @@ struct ResultView: View {
                     Text("Hydration Level: \(res.level.rawValue)/8")
                         .font(.title2)
                         .bold()
+                        .onAppear { peeColorIndicator = Double(res.level.rawValue) }
                     
                     // Slider label
                     Text("Adjust actual color:")
@@ -62,25 +62,14 @@ struct ResultView: View {
                         .frame(height: 20)
                         .padding(.horizontal)
                     
-                    // Slider to indicate color between white (0) and dark yellow (1)
-                    Slider(value: $peeColorIndicator, in: 0...1)
+                    // Slider for user rating (1-8)
+                    Slider(value: $peeColorIndicator, in: 1...8, step: 1)
                         .accentColor(Color.yellow)
                         .padding(.horizontal)
-
-                    HStack(spacing: 40) {
-                        Button("Delete") {
-                            captureVM.capturedImage = nil
-                            dismiss()
+                        .onChange(of: peeColorIndicator) { newValue in
+                            vm.updateUserRating(Int(newValue))
                         }
-                        .foregroundColor(.red)
 
-                        Button("Save") {
-                            try? vm.persistResult()
-                            captureVM.capturedImage = nil
-                            dismiss()
-                        }
-                        .buttonStyle(.borderedProminent)
-                    }
                 }
             }
         }

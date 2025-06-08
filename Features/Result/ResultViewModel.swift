@@ -15,6 +15,7 @@ final class ResultViewModel: ObservableObject {
 
     // MARK: – Public state
     @Published var state: LoadingState = .loading
+    private var savedEntryID: NSManagedObjectID?
 
     enum LoadingState {
         case loading
@@ -52,7 +53,7 @@ final class ResultViewModel: ObservableObject {
             // 1️⃣ Low-level colour analysis
             let result = try ImageAnalyzer().analyse(image)            // average HSV + UIImage
 
-            // 2️⃣ k-NN personalised prediction
+            // 2️⃣ personalised prediction using softmax regression
             let hsv = result.averageColor.toHSV()
             let predicted = HydrationPredictor()
                 .predict(h: Double(hsv.0),
@@ -104,5 +105,15 @@ final class ResultViewModel: ObservableObject {
 
         // userRating left nil until slider feedback
         try ctx.save()
+        savedEntryID = entry.objectID
+    }
+
+    func updateUserRating(_ rating: Int) {
+        guard let id = savedEntryID else { return }
+        let ctx = PersistenceController.shared.container.viewContext
+        if let entry = try? ctx.existingObject(with: id) as? Entry {
+            entry.userRating = Int16(rating)
+            try? ctx.save()
+        }
     }
 }

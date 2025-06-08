@@ -4,7 +4,9 @@
 //
 //  Created by Rafael Hajjar on 5/28/25.
 //
-//  A simple k-NN predictor that improves as more userRated entries appear.
+//  A simple predictor that trains a softmax regression model on
+//  user-labelled entries. Falls back to the original heuristic when
+//  insufficient data is available.
 //
 
 import Foundation
@@ -38,15 +40,9 @@ final class HydrationPredictor {
             return fallbackLevel(h: h, s: s, v: v)
         }
 
-        let distances = points.map { pt -> (Int, Double) in
-            let dh = pt.h - h, ds = pt.s - s, dv = pt.v - v
-            return (pt.label, sqrt(dh*dh + ds*ds + dv*dv))
-        }
-
-        let nearest = distances.sorted { $0.1 < $1.1 }.prefix(k)
-        let counts = Dictionary(nearest.map { ($0.0, 1) }, uniquingKeysWith: +)
-        return counts.max { $0.value < $1.value }?.key
-               ?? fallbackLevel(h: h, s: s, v: v)
+        // Train a small softmax regression model on-device
+        let model = SoftmaxRegression.train(points: points)
+        return model.predict(h: h, s: s, v: v)
     }
 
     /// original bucket logic as safety net
