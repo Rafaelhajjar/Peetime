@@ -11,6 +11,8 @@ struct ResultView: View {
     let capturedImage: UIImage
     @StateObject private var vm: ResultViewModel
     @State private var peeColorIndicator: Double = 0.5
+    @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var captureVM: CaptureViewModel
 
     init(image: UIImage) {
         self.capturedImage = image
@@ -64,6 +66,21 @@ struct ResultView: View {
                     Slider(value: $peeColorIndicator, in: 0...1)
                         .accentColor(Color.yellow)
                         .padding(.horizontal)
+
+                    HStack(spacing: 40) {
+                        Button("Delete") {
+                            captureVM.capturedImage = nil
+                            dismiss()
+                        }
+                        .foregroundColor(.red)
+
+                        Button("Save") {
+                            try? vm.persistResult()
+                            captureVM.capturedImage = nil
+                            dismiss()
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
                 }
             }
         }

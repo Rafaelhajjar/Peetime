@@ -22,6 +22,11 @@ final class ResultViewModel: ObservableObject {
         case failure(String)                // error message for UI
     }
 
+    // Cached info for saving later
+    private var pendingImage: UIImage?
+    private var pendingHSV: (CGFloat, CGFloat, CGFloat)?
+    private var pendingPredicted: Int?
+
     // MARK: – Init (kick-off analysis)
     init(image: UIImage) {
         Task { await analyse(image) }
@@ -54,10 +59,10 @@ final class ResultViewModel: ObservableObject {
                          s: Double(hsv.1),
                          v: Double(hsv.2))
 
-            // 3️⃣ Persist to Core Data
-            try save(image: image,
-                     hsv: hsv,
-                     predictedLevel: predicted)
+            // Store for later save
+            pendingImage = image
+            pendingHSV = hsv
+            pendingPredicted = predicted
 
             // 4️⃣ Guarantee spinner ≥ 1 s
             let elapsed = Date().timeIntervalSince(start)
@@ -71,6 +76,14 @@ final class ResultViewModel: ObservableObject {
             print("⚠️ Analysis error: \(error)")
             state = .failure("You seem to not have taken a picture of your peepee. \(error.localizedDescription)")
         }
+    }
+
+    // MARK: – Public save API
+    func persistResult() throws {
+        guard let img = pendingImage,
+              let hsv = pendingHSV,
+              let pred = pendingPredicted else { return }
+        try save(image: img, hsv: hsv, predictedLevel: pred)
     }
 
     // MARK: – Core Data save
